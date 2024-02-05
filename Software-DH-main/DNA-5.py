@@ -18,7 +18,7 @@ class compression:
     def cryptograpy_reverse(self):
 
                                     
-                    self.name = "Created: Jurijus pacalovas Please, pay 1000 000"                                    
+                    self.name = "Created: Jurijus Pacalovas"                                    
 
                 
 
