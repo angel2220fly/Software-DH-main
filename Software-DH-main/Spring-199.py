@@ -21,6 +21,10 @@ class compression:
                         elif Multiply>2**26*1024*1024:
                                    Multiply=2**26*1024*1024
                                    Number_of_the_file =((((Number_of_the_file * Square_of_ROOT) + Add_Numbers) // 3) * Multiply)
+                        elif Square_of_ROOT<=(26*1024*1024):
+                                   Multiply=(26*1024*1024)
+                                   Number_of_the_file =((((Number_of_the_file * Square_of_ROOT) + Add_Numbers) // 3) * Multiply)                                   
+                                   
                         else:
                             Square_of_ROOT=(26*1024*1024)
                             Number_of_the_file =((((Number_of_the_file * Square_of_ROOT) + Add_Numbers) // 3) * Multiply)                        
