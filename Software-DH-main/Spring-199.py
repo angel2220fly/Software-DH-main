@@ -17,6 +17,7 @@ class compression:
                         Square_of_ROOT = Hole_Number_information
                         
                         if  Square_of_ROOT<=(26*1024*1024) and Multiply<=2**26*1024*1024:
+                                F=1
                             
                         elif Multiply>2**26*1024*1024:
                                    Multiply=2**26*1024*1024
@@ -25,8 +26,7 @@ class compression:
                                    Multiply=(26*1024*1024)
                                                                       
                                    
-                        else:
-                            Square_of_ROOT=(26*1024*1024)
+                        
                         Number_of_the_file =((((Number_of_the_file * Square_of_ROOT) + Add_Numbers) // 3) * Multiply)
                         
                         if Number_of_the_file == Before_X:
