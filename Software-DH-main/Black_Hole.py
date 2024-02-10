@@ -25,11 +25,13 @@ with open(file_path, "w") as file:
         # Calculate lengths of X1 and X2
         N1 = len(str(X1))
         N2 = len(str(X2))
+        # Convert Number_of_the_file to binary format and remove the '0b' prefix
+        binary_number = bin(Number_of_the_file)[2:]
         # Write the values to the file
         file.write(f"Size of bits: {start_bits}\n")
         file.write(f"X1: {X1}, N1: {N1}\n")
         file.write(f"X2: {X2}, N2: {N2}\n")
-        file.write(f"Number_of_the_file: {Number_of_the_file}\n")
+        file.write(f"Binary Number_of_the_file: {binary_number}\n")
 
         X1 += 1
         Number_of_the_file += 1  # Increment Number_of_the_file for each file created
