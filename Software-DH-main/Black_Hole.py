@@ -22,10 +22,13 @@ with open(file_path, "w") as file:
         Square_of_ROOT = 2**Deep5
         Number_of_the_file = ((((Number_of_the_file * Square_of_ROOT) + Add_Numbers) // 3) * Multiply)
         start_bits = len(str(X1)) + len(str(X2))  # Calculate start_bits as the length of X1 and X2
+        # Calculate lengths of X1 and X2
+        N1 = len(str(X1))
+        N2 = len(str(X2))
         # Write the values to the file
         file.write(f"Size of bits: {start_bits}\n")
-        file.write(f"X1: {X1}\n")
-        file.write(f"X2: {X2}\n")
+        file.write(f"X1: {X1}, N1: {N1}\n")
+        file.write(f"X2: {X2}, N2: {N2}\n")
         file.write(f"Number_of_the_file: {Number_of_the_file}\n")
 
         X1 += 1
