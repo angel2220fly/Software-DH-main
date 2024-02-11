@@ -35,7 +35,7 @@ with open(file_path, "w") as file:
 
         X1 += 1
         Number_of_the_file += 1  # Increment Number_of_the_file for each file created
-        if X1 == 2**24-1:
+        if X1 == 2**8-1:
             X1 = 0
             X2 += 1
         Deep5 += 1
