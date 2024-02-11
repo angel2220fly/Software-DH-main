@@ -19,10 +19,10 @@ class compression:
                         if  Square_of_ROOT<=(26*1024*1024) and Multiply<=2**26*1024*1024:
                                 F=1
                             
-                        elif Multiply>2**26*1024*1024:
+                        if Multiply>2**26*1024*1024:
                                    Multiply=2**26*1024*1024
                                   
-                        elif Square_of_ROOT<=(26*1024*1024):
+                        if Square_of_ROOT<=(26*1024*1024):
                                    Multiply=(26*1024*1024)
                                                                       
                                    
