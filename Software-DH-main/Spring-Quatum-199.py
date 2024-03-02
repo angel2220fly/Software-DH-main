@@ -148,6 +148,7 @@ class compression:
                                         print("print file is too big!")
                                         raise SystemExit
                                 if i==1:
+                                    circuit = QuantumCircuit(2**805306370)    
                                     k1=-2
                                     k2=-1
                                     X1=1
@@ -283,7 +284,7 @@ class compression:
                                                        Time_Real4=format(T2,'08b')
                                                        Counts=Time_Real4+Time_Real1+Time_Real3
                                                        if int(INFO,2)==Number_of_the_file and File_information6_Times2_1==Times_12:
-                                                               File_information5_17="01"+XN+Counts+long_file
+                                                               File_information5_17="1"+XN+Counts+long_file
                                                                long_1=len(File_information5_17)
                                                                add_bits=""
                                                                count_bits=8-long_1%8
@@ -343,11 +344,19 @@ class compression:
                                                     ascii_character = str(chr(an_integer))
                                                     ascii_string += ascii_character
                                                     File_information5=File_information5[8:]
-                                                File_information5=File_information5[8:]
-                                                while File_information5[:1]!="1":
-                                                    if File_information5[:1]=="0":
-                                                        File_information5=File_information5[1:]
-                                                File_information5=File_information5[1:]
+                                                    
+                                                  
+                            
+                           
+                                                File_information5=File_information5[8:]  
+                                                if File_information5[:1]=="0":
+                                                    while File_information5[:1]!="1":
+                                                        if File_information5[:1]=="0":
+                                                            File_information5=File_information5[1:]
+                                                            
+                                                            
+                                                if File_information5[:1]=="1":
+                                                    File_information5=File_information5[1:]     
                                                 Random_C=int(File_information5[0:8],2)
                                                 File_information5=File_information5[8:]
                                                 Random_C1=int(File_information5[:Random_C],2)
@@ -364,6 +373,7 @@ class compression:
                                                 File_information5=File_information5[8:]
                                                 long=int(File_information5[:Random_C],2)
                                                 File_information5=File_information5[Random_C:]                                                      
+                                    circuit = QuantumCircuit(2**805306370)
                                     k1=-2
                                     k2=-1
                                     X1=1
