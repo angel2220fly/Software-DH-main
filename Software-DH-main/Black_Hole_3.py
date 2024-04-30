@@ -183,8 +183,6 @@ class compression:
                                                                     if C1>=8 or C1==1:
                                                                            C1=format(C1,'06b')
                                                                            C2=format(longl,'06b')
-                                                                           if C1==1:
-                                                                               C=C[1:]
                                                                            
   
                                                                            
@@ -328,8 +326,7 @@ class compression:
                                                                    
                                                                 EB=INFO[block:block+(63-Size)]
                                                                 block+=(63-Size)
-                                                                if Size==1:
-                                                                    EB+"1"+EB
+                                                                
                                                                 E=int(EB,2)
                                                                 ZE=format(E,'063b')
                                                                 C="0"+str(longl)+"b"
