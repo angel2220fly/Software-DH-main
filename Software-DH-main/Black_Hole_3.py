@@ -178,16 +178,55 @@ class compression:
                                                                     
                                                                     Counts=int(INFO_A,2)
                                                                     C=format(Counts,'01b')
-                                                                    C1=63-len(C)
+                                                                    C3=63-len(C)
                                                                     #print(C1)
-                                                                    if C1>=8 or C1==1:
-                                                                           C1=format(C1,'06b')
-                                                                           C2=format(longl,'06b')
-                                                                           
-  
-                                                                           
-                                                                           Z5="01"+C1+C
-                                                                           #print(INFO_A)
+                                                                    if C3>=9 or INFO_A[:3]=="011" or INFO_A[:3]=="010":
+                                                                        
+
+                                                                            #print(C3)
+                                                                            
+                                                                            
+                                                                            
+                                                                            
+                                                                            
+                                                                            
+                                                                 
+
+                                                                                  
+                                                                        
+                                                                      
+                                                                        if C3==1:
+                                                                         
+                                                                          M1=INFO_A[:2]
+                                                                          M2=INFO_A[2:]
+                                                                          
+                                                                          INFO_A=M2+M1
+                                                                          
+                                                                         
+                                                                            
+                                                                        Counts=int(INFO_A,2)
+                                                                        C=format(Counts,'01b')
+                                                                        C4=63-len(C)                                                                      
+                                                                        C1=format(C4,'06b')
+
+                                                                        C2=format(longl,'06b')                                                                              
+
+                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                                                               
+                                                                               
+                                                                        if C3!=1:
+                                                                               Z5="011"+C1+C 
+                                                                               #print(Z5) 
+                                                                                   
+                                                                               
+                                                                        if C3==1:
+                                                                               Z5="010"+C1+C
+                                                                               #print(Z5)
+                                                                               
+                                                                               
+                                                                               
+                                                                                                                                                                                                                               #print(INFO_A)
                                                                            #print(C1)
                                                                            #print(INFO_A)
                                                                     else:
@@ -311,12 +350,13 @@ class compression:
                                                       if Save==0:
                                                           
                                                         
-                                                            O=INFO[block:block+2]
-                                                
+                                                            O=INFO[block:block+3]
                                                             
-                                                            if O=="01":
+                                                            
+                                                            
+                                                            if O=="010":
                                                        
-                                                                block+=2                                  
+                                                                block+=3                                  
                                                                                                                           
                                                                 
                                                                 OCl=INFO[block:block+6]
@@ -325,14 +365,54 @@ class compression:
 
                                                                    
                                                                 EB=INFO[block:block+(63-Size)]
+                                                                
                                                                 block+=(63-Size)
                                                                 
+                                                                
+                                                             
+                                                                E=int(EB,2)
+                                                                ZE=format(E,'063b')
+                                                                C="0"+str(longl-2)+"b"
+                                                                ZE=format(E,'063b')
+                                                               
+                                                                Z2Z=format(E,C)
+                                                                #print(ZE)
+                                                                M1=ZE[:61]
+                                                                M2=ZE[61:]
+                                                                ZE=M2+M1
+                                                                
+                                                                M1=Z2Z[:longl-2]
+                                                                M2=Z2Z[longl-2:]
+                                                                Z2Z=M2+M1
+                                                                #print(ZE)
+                                                                          
+                                                                
+                                                                
+                                                                
+                                                                                                    
+                                                            
+                                                            elif O=="011":
+                                                       
+                                                       
+                                                                block+=3                                  
+                                                                                                                          
+                                                                
+                                                                OCl=INFO[block:block+6]
+                                                                Size=int(OCl,2)
+                                                                block+=6
+
+                                                                   
+                                                                EB=INFO[block:block+(63-Size)]
+                                                               
+                                                                block+=(63-Size)
+                                                                
+                                                             
                                                                 E=int(EB,2)
                                                                 ZE=format(E,'063b')
                                                                 C="0"+str(longl)+"b"
                                                                 ZE=format(E,'063b')
                                                                 Z2Z=format(E,C)
-                                                               
+                                                                            
                                                             else:
                                                                    EB=INFO[block:block+63]
                                                                    block+=63
