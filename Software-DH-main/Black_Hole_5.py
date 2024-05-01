@@ -51,8 +51,8 @@ class compression:
                         i=2
                     Clear=""
                     name = input("What is name of file? ")
-                    En=int(input("Please, enter 1-63 for compress and extract the same nhmber (key): "))
-                    if En<1 or En>63:
+                    En=int(input("Please, enter 10-63 for compress and extract the same nhmber (key): seach number while compress? "))
+                    if En<10 or En>63:
                         
                         En=63
                  
