@@ -51,6 +51,10 @@ class compression:
                         i=2
                     Clear=""
                     name = input("What is name of file? ")
+                    En=int(input("Please, enter 1-63 for compress and extract the same nhmber (key): "))
+                    if En<1 or En>63:
+                        
+                        En=63
                  
                
                        
@@ -173,12 +177,12 @@ class compression:
                                                                 block=0
                                                                 
                                                                 while block<long_F:
-                                                                    INFO_A=INFO[block:block+63]
+                                                                    INFO_A=INFO[block:block+En]
                                                                     longl=len(INFO_A)
                                                                     
                                                                     Counts=int(INFO_A,2)
                                                                     C=format(Counts,'01b')
-                                                                    C3=63-len(C)
+                                                                    C3=En-len(C)
                                                                     #print(C1)
                                                                     if C3>=9 or INFO_A[:3]=="011" or INFO_A[:3]=="010":
                                                                         
@@ -202,7 +206,7 @@ class compression:
                                                                             
                                                                         Counts=int(INFO_A,2)
                                                                         C=format(Counts,'01b')
-                                                                        C4=63-len(C)                                                                      
+                                                                        C4=En-len(C)                                                                      
                                                                         C1=format(C4,'06b')
 
                                                                         C2=format(longl,'06b')                                                                              
@@ -241,7 +245,7 @@ class compression:
                 
                                                                    
                                                                     Z4+=Z5
-                                                                    block+=63
+                                                                    block+=En
                                                                                                                                                                                                                         
                 
                                                             
@@ -353,15 +357,17 @@ class compression:
                                                             if O=="010":
                                                        
                                                                    block+=3
-                                                                   OC=INFO[block:block+61]
+                                                                   OC=INFO[block:block+En-2]
                                                                    E=int(OC,2)
-                                                                   ZE=format(E,'061b')
+                                                                   En1="0"+str(En-2)+"b"
+                                                                   
+                                                                   ZE=format(E,En1)
                                                                    C="0"+str(longl-2)+"b"
-                                                                   ZE=format(E,'061b')
+                                                                   ZE=format(E,En1)
                                                                    Z2Z=format(E,C)
                                                                    ZE="01"+ZE
                                                                    Z2Z="01"+Z2Z
-                                                                   block+=61                                                                                    
+                                                                   block+=En-2                                                                                   
 
                                                                      
                                                                 
@@ -380,26 +386,28 @@ class compression:
                                                                 block+=6
 
                                                                    
-                                                                EB=INFO[block:block+(63-Size)]
+                                                                EB=INFO[block:block+(En-Size)]
                                                                
-                                                                block+=(63-Size)
+                                                                block+=(En-Size)
+                                                                En1="0"+str(En)+"b"
                                                                 
                                                              
                                                                 E=int(EB,2)
-                                                                ZE=format(E,'063b')
+                                                                ZE=format(E,En1)
                                                                 C="0"+str(longl)+"b"
-                                                                ZE=format(E,'063b')
+                                                                ZE=format(E,En1)
                                                                 Z2Z=format(E,C)
                                                                             
                                                             else:
-                                                                   EB=INFO[block:block+63]
-                                                                   block+=63
+                                                                   EB=INFO[block:block+En]
+                                                                   block+=En
+                                                                   En1="0"+str(En)+"b"
                                                                   
 
                                                                    E=int(EB,2)
-                                                                   ZE=format(E,'063b')
+                                                                   ZE=format(E,En1)
                                                                    C="0"+str(longl)+"b"
-                                                                   ZE=format(E,'063b')
+                                                                   ZE=format(E,En1)
                                                                    Z2Z=format(E,C)                                                                                                   
     
                                                             
@@ -427,7 +435,7 @@ class compression:
                                                 long_L=len(Z4)
                                                 #print(long_L)
                                              
-                                                Z4=Z4[:long_L-63]
+                                                Z4=Z4[:long_L-En]
                                                 Z4+=Z2Z
                                                 
                                                     
