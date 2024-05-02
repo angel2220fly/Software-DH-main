@@ -13,33 +13,15 @@ name_input = input("c,  compress or e, extract? ")
 #@Author Jurijus Pacalovas
 class compression:
         def cryptograpy_compression4(self):
-                          
-                def process_files(Number_of_the_file, Hole_Number_information, Add_Numbers, Multiply, counts):
-                        Before_X = Number_of_the_file
-                        Square_of_ROOT = Hole_Number_information
-                        if Square_of_ROOT<=Key:
-                               Square_of_ROOT=Key
+              
+               
 
                                    
                   
                                                                       
                                    
                         
-                        Number_of_the_file =((((Number_of_the_file * Square_of_ROOT) + Add_Numbers) // 3) * Multiply)
-                        #print(Number_of_the_file)
-                        F=0
-                        if counts==-1:
-                                counts+=1
-                                F=1
-                        if Number_of_the_file == Before_X:
-                            counts=counts
-                        
-                        else:
-                            if F==0:
-                                    counts+=1
-                    
-                
-                        return Number_of_the_file, Square_of_ROOT, Add_Numbers, Multiply, counts
+
                 self.name = "Written: Jurijus pacalovas"
                 if name_input!="c" and name_input!="e":
                         print("The wrong letter")
@@ -51,10 +33,9 @@ class compression:
                         i=2
                     Clear=""
                     name = input("What is name of file? ")
-                    En=int(input("Please, enter 10-63 for compress and extract the same nhmber (key): seach number while compress? "))
-                    if En<10 or En>63:
+
                         
-                        En=63
+    
                  
                
                        
@@ -168,110 +149,125 @@ class compression:
                                                 
                                                 
                                                     Extract1=0
-                
-                                                    Z4=""
-                                                    N3=0
                                                     
-                                                    while Extract1!=1:
-                                                                long_F=len(INFO)
-                                                                block=0
-                                                                
-                                                                while block<long_F:
-                                                                    INFO_A=INFO[block:block+En]
-                                                                    longl=len(INFO_A)
+                                                    Find=0
+                                                    En=10
+                                                    Ci=1
+                                                    while Find!=1:
+                                                                    #print(Find)
+                    
+                                                                    Z4=""
+                                                                    N3=0                                                                    
+                                                                    long_F=len(INFO)
+                                                                    block=0
                                                                     
-                                                                    Counts=int(INFO_A,2)
-                                                                    C=format(Counts,'01b')
-                                                                    C3=En-len(C)
-                                                                    #print(C1)
-                                                                    if C3>=9 or INFO_A[:3]=="011" or INFO_A[:3]=="010":
+                                                                    while block<long_F:
+                                                                        INFO_A=INFO[block:block+En]
+                                                                        longl=len(INFO_A)
                                                                         
-
-                                                                            #print(C3)
-                                                                            
-                                                                            
-                                                                            
-                                                                            
-                                                                            
-                                                                            
-                                                                 
-
-                                                                                  
-                                                                        
-                                                                      
-                                                                         
-
-                                                                          
-                                                                         
-                                                                            
                                                                         Counts=int(INFO_A,2)
                                                                         C=format(Counts,'01b')
-                                                                        C4=En-len(C)                                                                      
-                                                                        C1=format(C4,'06b')
-
-                                                                        C2=format(longl,'06b')                                                                              
-
-                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-                                                                               
-                                                                               
-                                                                        if C3!=1:
-                                                                               Z5="011"+C1+C 
-                                                                               #print(Z5) 
+                                                                        C3=En-len(C)
+                                                                        #print(C1)
+                                                                        if C3>=9 or INFO_A[:3]=="011" or INFO_A[:3]=="010":
+                                                                            
+    
+                                                                                #print(C3)
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                     
+    
+                                                                                      
+                                                                            
+                                                                          
+                                                                             
+    
+                                                                              
+                                                                             
+                                                                                
+                                                                            Counts=int(INFO_A,2)
+                                                                            C=format(Counts,'01b')
+                                                                            C4=En-len(C)                                                                      
+                                                                            C1=format(C4,'06b')
+    
+                                                                            C2=format(longl,'06b')                                                                              
+    
+                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
                                                                                    
+                                                                                   
+                                                                            if C3!=1:
+                                                                                   Z5="011"+C1+C 
+                                                                                   #print(Z5) 
+                                                                                       
+                                                                                   
+                                                                            if C3==1:
+                                                                                   Z5="010"+INFO_A[2:]
+                                                                                   #print(Z5)
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                                                                                                                                                                   #print(INFO_A)
+                                                                               #print(C1)
+                                                                               #print(INFO_A)
+                                                                        else:
+                                                                        
+                                                                               Z5=INFO_A
                                                                                
-                                                                        if C3==1:
-                                                                               Z5="010"+INFO_A[2:]
-                                                                               #print(Z5)
-                                                                               
-                                                                               
-                                                                               
-                                                                                                                                                                                                                               #print(INFO_A)
-                                                                           #print(C1)
-                                                                           #print(INFO_A)
+                                                                               #not six zeros else 7 zeros or more left or 2-5 zeros
+                                                                        
+                    
+                                                                        
+                                                                             #change back
+                                                                            
+                                                                     
+                                                                            #same size
+                                                                            
+                    
+                                                                       
+                                                                        Z4+=Z5
+                                                                        #print(Find)
+                                                                        block+=En
+                                                                        
+                                                                        
+                                                                                                                                        
+                                                                        
+                                                                    if len(Z4)+6+8+6 < long_11*8 or En==63:
+                                                                                                                                                                                                                            Find=1
+                                                                                                                                                                                                                            Extract1=1
+                                                                                                                                                                                                                            #print(Find)
+                                                                                                                                                                                                                            #print(long_11)
+                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                                                                            
                                                                     else:
-                                                                    
-                                                                           Z5=INFO_A
-                                                                           
-                                                                           #not six zeros else 7 zeros or more left or 2-5 zeros
-                                                                    
-                
-                                                                    
-                                                                         #change back
-                                                                        
-                                                                 
-                                                                        #same size
-                                                                        
-                
-                                                                   
-                                                                    Z4+=Z5
-                                                                    block+=En
-                                                                                                                                                                                                                        
-                
+                                                                             En+=1  
+                                                                             #print(En)
+                                                                             #print(len(Z4))                                                                                                                                                                                                                   
+                                                    if Ci==1:               
                                                             
                                                            
                                                                 N3=1
-                                                              
+                                                                                                                 
                                                                 
                                                                 CL1=format(longl,'06b')
+                                                                CL2=format(En,'06b')
                                                                
                                                                 #print(N3)
                                                                                                                          
                                                                 if N3==1:
+
                                                                      
                                                                      
-                                                                       Time_Real3=bin(long_1)[2:]
-                                                                       T1=len(Time_Real3)
-                                                                       Time_Real4=format(T1,'08b')
-                                                                       long_file=Time_Real4+Time_Real3
                                                                        
-                                                                       
-                                                                       File_information5_17="1"+Z4+long_file
                                                                      
                                                                        #print(Long_PM1)
-                                                                       
+                                                                       N3=1                                                                       
                                                                        if N3==1:
-                                                                               File_information5_17="1"+CL1+Z4
+                                                                               File_information5_17="1"+CL2+CL1+Z4
                                                                                long_1=len(File_information5_17)
                                                                                add_bits=""
                                                                                count_bits=8-long_1%8
@@ -333,6 +329,10 @@ class compression:
 
                                                             
                                     INFO=Extract
+                                    En=int(INFO[:6],2)
+                                    #print(longl)
+                                    INFO=INFO[6:]
+                                    
                                     longl=int(INFO[:6],2)
                                     #print(longl)
                                     INFO=INFO[6:]
@@ -445,18 +445,15 @@ class compression:
                                                 #print(N3)
                                                                                                          
                                                 if N3==1:
+                                                      
                                                      
                                                      
-                                                       Time_Real3=bin(long_1)[2:]
-                                                       T1=len(Time_Real3)
-                                                       Time_Real4=format(T1,'08b')
-                                                       long_file=Time_Real4+Time_Real3
                                                        
-                                                       
-                                                       File_information5_17="1"+Z4+long_file
                                                      
                                                        #print(Long_PM1)
-                                                       
+                                                        
+                                                        
+                                                       N3=1
                                                        if N3==1:
                                                                File_information5_17=Z4
                                                                long_1=len(File_information5_17)
