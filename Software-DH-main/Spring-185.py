@@ -20,7 +20,7 @@ def reverse_bits(data):
     reversed_data = reversed_data.replace(b'10', b'11')
     reversed_data = reversed_data.replace(b'00', b'10')
     reversed_data = reversed_data.replace(b'01', b'00')
-    reversed_data = reversed_data.replace(b'10', b'00')
+    reversed_data = reversed_data.replace(b'10', b'01')
     return reversed_data
 
 # Function to find Pythagorean triples
